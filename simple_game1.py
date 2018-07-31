@@ -15,3 +15,6 @@ while True:
     sys_font = pygame.font.Sysfont("None", 19)
     rendered = sys_font.render('Hello World', 0, (255, 100, 100))
     screen.blit(rendered, (100, 100))
+
+    for even in pygame.event.get():
+        pass
