@@ -7,12 +7,12 @@ from pygame.locals import *
 
 # Initalize Pygame
 pygame.init()
-screen = pygame.display.set_mode((400, 300))
+screen = pygame.display.set_mode((700, 500))
 
 pygame.display.set_caption('Hello World!')
 
 while True:
-    sys_font = pygame.font.SysFont("None", 19)
+    sys_font = pygame.font.SysFont("None", 40)
     rendered = sys_font.render('Hello World', 0, (0, 255, 255))
     screen.blit(rendered, (100, 100))
 
