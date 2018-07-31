@@ -13,4 +13,4 @@ pygame.display.set_caption("Hello World!")
 
 while True:
     sys_font = pygame.font.Sysfont("None", 19)
-    
+    rendered = sys_font.render('Hello World', 0, (255, 100, 100))
