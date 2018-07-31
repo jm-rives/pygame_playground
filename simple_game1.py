@@ -17,4 +17,8 @@ while True:
     screen.blit(rendered, (100, 100))
 
     for even in pygame.event.get():
-        pass
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+
+    pygame.display.update()
