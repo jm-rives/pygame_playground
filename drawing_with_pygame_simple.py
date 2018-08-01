@@ -29,4 +29,4 @@ pygame.draw.line(screen, colors[1], (0, 0), (200, 200), 3)
 pygame.draw.rect(screen, colors[2], (200, 9, 100, 100))
 
 # this should result in an elilipse being drawn to the surface
-# pygame.draw.elilipse(screen, co)
+pygame.draw.ellipse(screen, colors[3], (100, 300, 100, 50), 2)
