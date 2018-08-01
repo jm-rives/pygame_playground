@@ -24,6 +24,9 @@ pygame.draw.circle(screen, colors[0], (200, 200), 25, 0)
 # takes start and end point, final parameter indicates line thickness
 pygame.draw.line(screen, colors[1], (0, 0), (200, 200), 3)
 
-# this should result in a rectangle
+# this should result in a rectangle being drawn to the surface
 # required paramters are color, coordinates of upper left hand corner, and dimensions
-pygame.draw.rectangle(screen, colors[2], 200, 9, 100, 100)
+pygame.draw.rect(screen, colors[2], (200, 9, 100, 100))
+
+# this should result in an elilipse being drawn to the surface
+# pygame.draw.elilipse(screen, co)
