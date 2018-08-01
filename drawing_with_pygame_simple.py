@@ -6,6 +6,8 @@ import pygame, sys
 from pygame.locals import *
 import numpy
 
+pygame.init()
+
 colors = numpy.random.randint(0, 255, size=(4, 3))
 
 WHITE = (255, 255, 255) # QUESTION? Would hex codes werk?
