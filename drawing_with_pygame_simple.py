@@ -7,9 +7,14 @@ from pygame.locals import *
 import numpy
 
 pygame.init()
+screen = pygame.display.set_mode((400,400))
 
 colors = numpy.random.randint(0, 255, size=(4, 3))
 
 WHITE = (255, 255, 255) # QUESTION? Would hex codes werk?
 
+# this should result in a surface that is white
 screen.fill(WHITE)
+
+# this should result in a ciricle being displayed in our screen
+pygame.draw.circle(screen, colors[0], (200, 200), 25, 0)
