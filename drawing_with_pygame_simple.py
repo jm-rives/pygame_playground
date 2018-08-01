@@ -10,6 +10,9 @@ import numpy
 pygame.init()
 screen = pygame.display.set_mode((400,400))
 
+# add caption to window
+pygame.display.set_caption("Drawing with Pygame")
+
 colors = numpy.random.randint(0, 255, size=(4, 3))
 
 WHITE = (255, 255, 255) # QUESTION? Would hex codes werk?
