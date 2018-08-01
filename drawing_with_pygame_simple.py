@@ -19,3 +19,11 @@ screen.fill(WHITE)
 
 # this should result in a ciricle being displayed in our screen
 pygame.draw.circle(screen, colors[0], (200, 200), 25, 0)
+
+# this should result in a line drawn to the screen
+# takes start and end point, final parameter indicates line thickness
+pygame.draw.line(screen, colors[1], (0, 0), (200, 200), 3)
+
+# this should result in a rectangle
+# required paramters are color, coordinates of upper left hand corner, and dimensions
+pygame.draw.rectangle(screen, colors[2], 200, 9, 100, 100)
