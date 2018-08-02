@@ -27,3 +27,4 @@ def plot(data):
     return pygame.image.fromstring(raw_data, size, "RGB")
 
 pygame.init()
+clock = pygame.display.set_mode((400, 400))
