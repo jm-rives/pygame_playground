@@ -9,3 +9,18 @@ import numpy
 clock = pygame.time.Clock()
 
 img = pygame.image.load('head.jpg')
+
+steps = numpy.linspace(20, 260, 40).astype(int)
+right = numpy.zeros((2, len(steps)))
+down = numpy.zeros((2, len(steps)))
+left = numpy.zeros((2, len(steps)))
+up = numpy.zeros((2, len(steps)))
+
+right[0] = steps
+right[1] = 20
+down[0] = 360
+down[1] = steps
+left[0] = steps[::-1]
+left[1] = 360
+up[0] = 20
+up[1] = steps[::-1]
