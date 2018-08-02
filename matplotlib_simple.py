@@ -17,4 +17,11 @@ ax = fig.add_subplot(111)
 canvas = agg.FigureCanvasAgg(fig)
 
 def plot(data):
-    pass
+    ax.plot(data)
+    canvas.draw()
+    renderer = canvas.get_renderer()
+
+    raw_data = renderer.tostring_rgb()
+    size = canvas.get_width_height()
+
+    return pygame.image.fromstring(raw_data, size, "RGB")
