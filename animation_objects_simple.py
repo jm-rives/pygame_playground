@@ -26,3 +26,4 @@ up[0] = 20
 up[1] = steps[::-1]
 
 pos = numpy.concatenate((right.T, down.T, up.T))
+i = 0
