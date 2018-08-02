@@ -13,3 +13,8 @@ import matplotlib.backends.backend_agg as agg
 matplotlib.use("Agg")
 
 fig = plt.figure(figsize=[3, 3])
+ax = fig.add_subplot(111)
+canvas = agg.FigureCanvasAgg(fig)
+
+def plot(data):
+    pass
