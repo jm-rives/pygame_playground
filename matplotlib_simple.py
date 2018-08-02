@@ -25,3 +25,5 @@ def plot(data):
     size = canvas.get_width_height()
 
     return pygame.image.fromstring(raw_data, size, "RGB")
+
+pygame.init()
