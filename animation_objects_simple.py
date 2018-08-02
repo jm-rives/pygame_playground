@@ -7,3 +7,5 @@ from pygame.locals import *
 import numpy
 
 clock = pygame.time.Clock()
+
+img = pygame.image.load('head.jpg')
