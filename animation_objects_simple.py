@@ -5,3 +5,5 @@
 import pygame, sys
 from pygame.locals import *
 import numpy
+
+clock = pygame.time.Clock()
