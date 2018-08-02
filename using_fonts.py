@@ -6,3 +6,7 @@
 import pygame, sys
 from pygame.locals import *
 import numpy
+
+pygame.init()
+clock = pygame.time.Clock()
+screen = pygame.display.set_mode((400, 400))
