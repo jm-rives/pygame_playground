@@ -24,3 +24,5 @@ left[0] = steps[::-1]
 left[1] = 360
 up[0] = 20
 up[1] = steps[::-1]
+
+pos = numpy.concatenate((right.T, down.T, up.T))
