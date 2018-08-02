@@ -9,3 +9,7 @@ import numpy
 import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.backends.backend_agg as agg
+
+matplotlib.use("Agg")
+
+fig = plt.figure(figsize=[3, 3])
