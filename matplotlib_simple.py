@@ -4,7 +4,7 @@
 # accessed at https://www.packtpub.com/mapt/book/game_development/9781782162865 July 31, 2018.
 # critical modules for game funcition
 import pygame, sys
-from pygame.local import *
+from pygame.locals import *
 import numpy
 import matplotlib
 import matplotlib.pyplot as plt
@@ -27,4 +27,5 @@ def plot(data):
     return pygame.image.fromstring(raw_data, size, "RGB")
 
 pygame.init()
-clock = pygame.display.set_mode((400, 400))
+clock = pygame.time.Clock()
+screen = pygame.display.set_mode((400, 400))
