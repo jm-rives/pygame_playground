@@ -6,7 +6,9 @@ import pygame, sys
 from pygame.locals import *
 import numpy
 
+pygame.init()
 clock = pygame.time.Clock()
+screen = pygame.display.set_mode((400, 400))
 
 img = pygame.image.load('head.jpg')
 
@@ -27,3 +29,20 @@ up[1] = steps[::-1]
 
 pos = numpy.concatenate((right.T, down.T, up.T))
 i = 0
+
+while True:
+    # Erase screen
+    screen.fill((255, 255, 255))
+
+    if i >= len(pos):
+        i = 0
+    screen.blit(img, pos[i])
+    i += 1
+
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+
+    pygame.display.update()
+    clock.tick(30)
