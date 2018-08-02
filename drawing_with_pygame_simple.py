@@ -33,3 +33,13 @@ pygame.draw.rect(screen, colors[2], (200, 9, 100, 100))
 
 # this should result in an elilipse being drawn to the surface
 pygame.draw.ellipse(screen, colors[3], (100, 300, 100, 50), 2)
+
+while True:
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+
+    pygame.display.update()
+
+    
