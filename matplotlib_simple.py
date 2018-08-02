@@ -7,10 +7,13 @@ import pygame, sys
 from pygame.locals import *
 import numpy
 import matplotlib
+
+matplotlib.use("Agg")
+
 import matplotlib.pyplot as plt
 import matplotlib.backends.backend_agg as agg
 
-matplotlib.use("Agg")
+
 
 fig = plt.figure(figsize=[3, 3])
 ax = fig.add_subplot(111)
@@ -37,6 +40,7 @@ steps = numpy.linspace(20, 360, 40).astype(int)
 right = numpy.zeros((2, len(steps)))
 down = numpy.zeros((2, len(steps)))
 left = numpy.zeros((2, len(steps)))
+up = numpy.zeros((2, len(steps)))
 
 right[0] = steps
 right[1] = 20
@@ -54,3 +58,24 @@ pos = numpy.concatenate((right.T, down.T, left.T, up.T))
 i = 0
 history = numpy.array([])
 surf = plot(history)
+
+while True:
+    # Erase screen
+    screen.fill((255, 255, 255))
+    if i >= len(pos):
+        i = 0
+        surf = plot(history)
+
+    screen.blit(img, pos[i])
+    history = numpy.append(history, pos[i])
+    screen.blit(surf, (100, 100))
+
+    i += 1
+
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+
+    pygame.display.update()
+    clock.tick(30)
