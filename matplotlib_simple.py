@@ -7,3 +7,5 @@ import pygame, sys
 from pygame.local import *
 import numpy
 import matplotlib
+import matplotlib.pyplot as plt
+import matplotlib.backends.backend_agg as agg
