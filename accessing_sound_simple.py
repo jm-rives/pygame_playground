@@ -9,9 +9,11 @@ import urllib2
 import time
 
 WAV_FILE = 'smashingbaby.wav'
-audio = pygame.mixer.Sound(WAV_FILE)
-audio.play(-1)
 
-pygame.time.delay(TIMEOUT * 1000)
-
-audio.stop()
+def play:
+    audio = pygame.mixer.Sound(WAV_FILE)
+    audio.play(-1)
+    TIMEOUT = 1
+    pygame.time.delay(TIMEOUT * 1000)
+    audio.stop()
+    time.sleep(TIMEOUT)
