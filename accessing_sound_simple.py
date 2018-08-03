@@ -10,7 +10,7 @@ import time
 
 WAV_FILE = 'smashingbaby.wav'
 
-def play:
+def play():
     audio = pygame.mixer.Sound(WAV_FILE)
     audio.play(-1)
     TIMEOUT = 1
@@ -18,3 +18,9 @@ def play:
     audio.stop()
 
 pygame.init()
+pygame.display.set_caption("Sound Demo")
+response = urllib2.urlopen("http://www.thesoundarchive.com/austinpowers/smashingbaby.wav")
+filehandle = open(WAV_FILE, 'w')
+filehandle.write(response.read())
+filehandle.close()
+screen = pygame.display.set_mode((400, 400))
