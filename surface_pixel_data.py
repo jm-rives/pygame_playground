@@ -15,3 +15,8 @@ pixels = pygame.surfarray.array2d(img)
 X = pixels.shape[0] * 7
 Y = pixels.shape[1] * 7
 screen = pygame.display.set_mode((X, Y))
+
+# tiles the image via tile function
+new_pixels = numpy.tile(pixels, (7, 7)).astype(int)
+# displays the array on the screen
+pygame.surfarray.blit_array(screen, new_pixels)
