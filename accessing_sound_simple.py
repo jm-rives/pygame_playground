@@ -8,6 +8,7 @@ from pygame.locals import *
 import urllib2
 import time
 
+WAV_FILE = 'smashingbaby.wav'
 audio = pygame.mixer.Sound(WAV_FILE)
 audio.play(-1)
 
