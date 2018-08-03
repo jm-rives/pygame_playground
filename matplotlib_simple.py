@@ -7,21 +7,27 @@ import pygame, sys
 from pygame.locals import *
 import numpy
 import matplotlib
-
+# Instance attribute specifies non-iteractive back-end and must be called before
+# other matplotlibs
 matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
 import matplotlib.backends.backend_agg as agg
 
 
-
+# creates a 3" x 3" figure
 fig = plt.figure(figsize=[3, 3])
+# creates a subplot
 ax = fig.add_subplot(111)
+# creates non-iteractive mode canvas
 canvas = agg.FigureCanvasAgg(fig)
 
 def plot(data):
+    # function creates a plot using specified data
     ax.plot(data)
+    # function that draws the canvas
     canvas.draw()
+    # gets a renderer for the canvas
     renderer = canvas.get_renderer()
 
     raw_data = renderer.tostring_rgb()
