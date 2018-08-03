@@ -4,7 +4,14 @@
 # accessed at https://www.packtpub.com/mapt/book/game_development/9781782162865 July 31, 2018.
 # critical modules for game funcition
 import pygame, sys
-import pygame.locals import *
+from pygame.locals import *
 import numpy
 
-pygame.intit()
+pygame.init()
+# surfarray handles the confersion between Surface and NumPy arrays
+# array2d copies pixels into a 2-d array
+pixels = pygame.surfarray.array2d(img)
+
+X = pixels.shape[0] * 7
+Y = pixels.shape[1] * 7
+screen = pygame.display.set_mode((X, Y))
