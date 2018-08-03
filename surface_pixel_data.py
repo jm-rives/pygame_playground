@@ -3,3 +3,8 @@
 # from the book "Instant Pygame for Python Game Development How-to" by Ivan Idris
 # accessed at https://www.packtpub.com/mapt/book/game_development/9781782162865 July 31, 2018.
 # critical modules for game funcition
+import pygame, sys
+import pygame.locals import *
+import numpy
+
+pygame.intit()
