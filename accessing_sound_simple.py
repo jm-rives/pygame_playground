@@ -5,3 +5,5 @@
 # critical modules for game funcition
 import pygame
 from pygame.locals import *
+
+audio = pygame.mixer.Sound(WAV_FILE)
