@@ -16,4 +16,5 @@ def play:
     TIMEOUT = 1
     pygame.time.delay(TIMEOUT * 1000)
     audio.stop()
-    time.sleep(TIMEOUT)
+
+pygame.init()
