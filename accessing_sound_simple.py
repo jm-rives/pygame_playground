@@ -24,3 +24,16 @@ filehandle = open(WAV_FILE, 'w')
 filehandle.write(response.read())
 filehandle.close()
 screen = pygame.display.set_mode((400, 400))
+
+while True:
+    sys_font = pygame.font.Sysfont("None, 19")
+    rendered = sys_font.render("Smashing Baby", 0, (255, 100, 100))
+    screen.blit(rendered, (100, 100))
+
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            play()
+            pygame.quit()
+            sys.exit()
+
+    pygame.display.update()
