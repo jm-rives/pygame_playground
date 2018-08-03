@@ -8,6 +8,7 @@ from pygame.locals import *
 import numpy
 
 pygame.init()
+img = pygame.image.load('bax_head.jpg')
 # surfarray handles the confersion between Surface and NumPy arrays
 # array2d copies pixels into a 2-d array
 pixels = pygame.surfarray.array2d(img)
