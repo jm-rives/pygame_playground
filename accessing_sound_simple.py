@@ -5,5 +5,12 @@
 # critical modules for game funcition
 import pygame
 from pygame.locals import *
+import urllib2
+import time
 
 audio = pygame.mixer.Sound(WAV_FILE)
+audio.play(-1)
+
+pygame.time.delay(TIMEOUT * 1000)
+
+audio.stop()
