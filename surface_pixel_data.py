@@ -16,6 +16,7 @@ pixels = pygame.surfarray.array2d(img)
 X = pixels.shape[0] * 7
 Y = pixels.shape[1] * 7
 screen = pygame.display.set_mode((X, Y))
+pygame.display.set_caption("Surfarray Demo")
 
 # tiles the image via tile function
 new_pixels = numpy.tile(pixels, (7, 7)).astype(int)
