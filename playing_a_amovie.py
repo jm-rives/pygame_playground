@@ -8,3 +8,14 @@
 import pygame, sys
 import pygame.locals import *
 import time
+
+pygame.init()
+screen = pygame.display.set_mode((400, 400))
+pygame.display.set_caption('Movie Demo')
+
+def play():
+    movie = pygame.movie.Movie('out.mpg')
+    movie.play()
+    TIMEOUT = 7
+    pygame.time.delay(TIMEOUT * 1000)
+    movie.stop()
