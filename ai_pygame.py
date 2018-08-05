@@ -9,3 +9,6 @@ import pygame, sys
 from pygame.locals import *
 
 positions = numpy.random.randint(9, 400, size=(30, 2))
+
+positions_norms = numpy.sum(positions  ** 2, axis=1)
+S = - positions_norms[:, numpy.newaxis] - positions_norms[numpy.newaxis, :] + 2 * numpy.dot(positions, positions.T)
