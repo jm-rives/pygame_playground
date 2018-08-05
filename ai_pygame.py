@@ -20,3 +20,7 @@ polygon_points = []
 
 for i in xrange(max(labels) + 1):
     polygon_points.append([])
+
+# Sorting points by cluster
+for i, l in enumerate(labels):
+    polygon_points[l].append(positions[i])
