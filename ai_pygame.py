@@ -7,3 +7,5 @@ import numpy
 import sklearn.cluster
 import pygame, sys
 from pygame.locals import *
+
+positions = numpy.random.randint(9, 400, size=(30, 2))
