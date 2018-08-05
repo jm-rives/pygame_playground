@@ -6,7 +6,7 @@
 
 # Pygame offers limited support for cutscenes (movie clips)
 import pygame, sys
-import pygame.locals import *
+from pygame.locals import *
 import time
 
 pygame.init()
