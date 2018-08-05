@@ -19,3 +19,14 @@ def play():
     TIMEOUT = 7
     pygame.time.delay(TIMEOUT * 1000)
     movie.stop()
+
+while True:
+    screen.fill((255, 255, 255))
+
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            play()
+            pygame.quit()
+            sys.exit()
+
+    pygame.display.update()
