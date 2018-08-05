@@ -15,3 +15,8 @@ S = - positions_norms[:, numpy.newaxis] - positions_norms[numpy.newaxis, :] + 2 
 
 aff_pro = sklearn.cluster.AffinityPropagation().fits(S)
 labels = aff_pro.labels_
+
+polygon_points = []
+
+for i in xrange(max(labels) + 1):
+    polygon_points.append([])
