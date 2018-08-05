@@ -24,3 +24,17 @@ for i in xrange(max(labels) + 1):
 # Sorting points by cluster
 for i, l in enumerate(labels):
     polygon_points[l].append(positions[i])
+
+pygame.init()
+screen = pygame.display.set_mode((400, 400))
+
+while True:
+    for point in polygon_points:
+        pygame.draw.polygon(screen, (255, 0, 0), point)
+
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit
+
+    pygame.display.update()
