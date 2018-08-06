@@ -27,7 +27,7 @@ class Head(pygame.sprite.Sprite):
         self.MARGIN = 12
         self.xstep = self.STEP
         self.ystep = 0
-        self.dizzy = 0
+        self.degrees = 0
         self.direction = 'right'
 
 def update(self):
