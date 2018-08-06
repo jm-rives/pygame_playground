@@ -47,7 +47,7 @@ class Head(pygame.sprite.Sprite):
         if self.direction == 'down' and self.rect.bottom > self.area.bottom - self.MARGIN:
             self.xstep = -self.STEP
             self.ystep = 0
-            self.direciton = 'left'
+            self.direction = 'left'
 
         if self.direction == 'left' and self.rect.left < self.area.left + self.MARGIN:
             self.xstep = 0
