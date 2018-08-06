@@ -28,3 +28,6 @@ class Head(pygame.sprite.Sprite):
         self.ystep = 0
         self.dizzy = 0
         self.direction = 'right'
+
+def update(self):
+    pass
