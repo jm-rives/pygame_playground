@@ -92,4 +92,6 @@ def main():
     screen.blit(background, (0, 0))
     pygame.display.flip()
 
-    
+    clock = pygame.time.Clock()
+    head = Head()
+    sprite = pygame.sprite.RenderPlain(head)
