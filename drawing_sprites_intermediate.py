@@ -84,4 +84,7 @@ def main():
     background.fill((250, 250, 250))
 
     if pygame.font:
-        pass
+        font = pygame.font.Font(None, 36)
+        text = font.render("Hit the avatar!", 1, (0, 0, 200))
+        textpos = text.get_rect(centerx = background.get_width()/2, centery = background.get()/2)
+        background.blit(text, textpos)
