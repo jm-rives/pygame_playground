@@ -79,7 +79,7 @@ def main():
     screen = pygame.display.set_mode((400, 400))
     pygame.display.set_caption("Sprite Demo")
 
-    background = pygame.Surgace(screen.get_size())
+    background = pygame.Surface(screen.get_size())
     background = background.convert()
     background.fill((250, 250, 250))
 
