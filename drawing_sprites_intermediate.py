@@ -111,6 +111,7 @@ def main():
         screen.blit(background, (0, 0))
         sprite.draw(screen)
         pygame.display.flip()
+        
 
 if __name__ == '__main__':
     main()
