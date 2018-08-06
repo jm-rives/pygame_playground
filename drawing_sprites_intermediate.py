@@ -48,7 +48,7 @@ def _move(self):
         self.ystep = 0
         self.direciton = 'left'
 
-if self.direction = 'left' and self.rect.left < self.area.left + self.MARGIN:
-    self.xstep = 0
-    self.ystep = -self.STEP
-    self.direction = 'up'
+    if self.direction = 'left' and self.rect.left < self.area.left + self.MARGIN:
+        self.xstep = 0
+        self.ystep = -self.STEP
+        self.direction = 'up'
