@@ -8,4 +8,15 @@ import os, pygame
 from pygame.locals import *
 
 class Head(pygame.sprite.Sprite):
-    pass
+    def __init__(self):
+        pygame.sprite.Sprite.__init__(self)
+        self.image, self.rect = load_image('head.jpg', -1)
+        screen = pygame.display.get_surface()
+        self.STEP = 9
+        self.MARGIN = 12
+        self.xstep = self.STEP
+        self.ystep = 0
+        self.dizzy = 0
+        self.direction = 'right'
+
+newpos = self.react.move((self.xstep, self.ystep))
