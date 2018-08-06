@@ -61,4 +61,10 @@ def _move(self):
     self.rect = newpos
 
 def _spin(self):
-    pass
+    center = self.rect.center
+    self.degrees = self.degrees + 12
+    if self.degrees >= 360:
+        self.degree = 0
+    else:
+        self.image = pygame.transform.rotate(self.original, self.degrees)
+    self.rect = self.image.get_rect(center=center)
