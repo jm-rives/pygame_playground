@@ -97,4 +97,12 @@ def main():
     sprite = pygame.sprite.RenderPlain(head)
 
     while True:
-        pass
+        clock.tick(60)
+
+        for event in pygame.get():
+            if event.type == QUIT:
+                return
+            elif event.type == MOUSEBUTTONDOWN:
+                head.hit()
+
+        
