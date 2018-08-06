@@ -111,5 +111,5 @@ def main():
         sprite.draw(screen)
         pygame.display.flip()
 
-if __name__ == '__main__'
+if __name__ == '__main__':
     main()
