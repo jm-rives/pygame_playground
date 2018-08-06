@@ -105,4 +105,8 @@ def main():
             elif event.type == MOUSEBUTTONDOWN:
                 head.hit()
 
-        
+        sprite.update()
+
+        screen.blit(background, (0, 0))
+        sprite.draw.(screen)
+        pygame.display.flip()
