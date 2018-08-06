@@ -7,6 +7,9 @@
 import os, pygame
 from pygame.locals import *
 
+def load_image(name, colorkey=None):
+    pass
+    
 class Head(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
@@ -18,5 +21,3 @@ class Head(pygame.sprite.Sprite):
         self.ystep = 0
         self.dizzy = 0
         self.direction = 'right'
-
-newpos = self.react.move((self.xstep, self.ystep))
