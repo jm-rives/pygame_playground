@@ -53,5 +53,9 @@ def _move(self):
         self.ystep = -self.STEP
         self.direction = 'up'
 
-    if self.direction == 'up' and self.rect.top < self.area top  + self.MARGIN:
-        pass
+    if self.direction == 'up' and self.rect.top < self.area.top  + self.MARGIN:
+        self.xstep = self.STEP
+        self.ystep = 0
+        self.direction = 'right'
+
+    self.rect = newpos
