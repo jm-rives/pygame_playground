@@ -68,3 +68,6 @@ def _spin(self):
     else:
         self.image = pygame.transform.rotate(self.original, self.degrees)
     self.rect = self.image.get_rect(center=center)
+
+def hit(self):
+    pass
