@@ -88,3 +88,8 @@ def main():
         text = font.render("Hit the avatar!", 1, (0, 0, 200))
         textpos = text.get_rect(centerx = background.get_width()/2, centery = background.get()/2)
         background.blit(text, textpos)
+
+    screen.blit(background, (0, 0))
+    pygame.display.flip()
+
+    
