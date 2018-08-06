@@ -30,4 +30,7 @@ class Head(pygame.sprite.Sprite):
         self.direction = 'right'
 
 def update(self):
-    pass
+    if self.degrees:
+        self._spin()
+    else:
+        self._move()
