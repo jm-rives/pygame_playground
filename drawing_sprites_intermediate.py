@@ -95,3 +95,6 @@ def main():
     clock = pygame.time.Clock()
     head = Head()
     sprite = pygame.sprite.RenderPlain(head)
+
+    while True:
+        pass
