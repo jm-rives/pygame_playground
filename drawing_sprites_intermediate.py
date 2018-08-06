@@ -59,3 +59,6 @@ def _move(self):
         self.direction = 'right'
 
     self.rect = newpos
+
+def _spin(self):
+    pass
