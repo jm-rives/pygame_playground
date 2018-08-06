@@ -34,3 +34,13 @@ def update(self):
         self._spin()
     else:
         self._move()
+
+def _move(self):
+    newpos = self.rect.move((self.xstep, self.ystep))
+
+    if self.direction == 'right' and self.rect.right > self.area.right - self.MARGIN:
+        self.xstep = 0
+        self.ystep = self.xstep
+        self.direction = 'down'
+
+    
