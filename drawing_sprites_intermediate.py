@@ -99,7 +99,7 @@ def main():
     while True:
         clock.tick(60)
 
-        for event in pygame.get():
+        for event in pygame.event.get():
             if event.type == QUIT:
                 return
             elif event.type == MOUSEBUTTONDOWN:
