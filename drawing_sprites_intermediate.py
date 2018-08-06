@@ -41,7 +41,7 @@ class Head(pygame.sprite.Sprite):
 
         if self.direction == 'right' and self.rect.right > self.area.right - self.MARGIN:
             self.xstep = 0
-            self.ystep = self.xstep
+            self.ystep = self.STEP
             self.direction = 'down'
 
         if self.direction == 'down' and self.rect.bottom > self.area.bottom - self.MARGIN:
@@ -65,7 +65,8 @@ class Head(pygame.sprite.Sprite):
         center = self.rect.center
         self.degrees = self.degrees + 12
         if self.degrees >= 360:
-            self.degree = 0
+            self.degrees = 0
+            self.image = self.original
         else:
             self.image = pygame.transform.rotate(self.original, self.degrees)
         self.rect = self.image.get_rect(center=center)
@@ -111,7 +112,7 @@ def main():
         screen.blit(background, (0, 0))
         sprite.draw(screen)
         pygame.display.flip()
-        
+
 
 if __name__ == '__main__':
     main()
