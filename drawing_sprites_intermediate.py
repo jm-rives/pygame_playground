@@ -30,50 +30,50 @@ class Head(pygame.sprite.Sprite):
         self.degrees = 0
         self.direction = 'right'
 
-def update(self):
-    if self.degrees:
-        self._spin()
-    else:
-        self._move()
+    def update(self):
+        if self.degrees:
+            self._spin()
+        else:
+            self._move()
 
-def _move(self):
-    newpos = self.rect.move((self.xstep, self.ystep))
+    def _move(self):
+        newpos = self.rect.move((self.xstep, self.ystep))
 
-    if self.direction == 'right' and self.rect.right > self.area.right - self.MARGIN:
-        self.xstep = 0
-        self.ystep = self.xstep
-        self.direction = 'down'
+        if self.direction == 'right' and self.rect.right > self.area.right - self.MARGIN:
+            self.xstep = 0
+            self.ystep = self.xstep
+            self.direction = 'down'
 
-    if self.direction == 'down' and self.rect.bottom > self.area.bottom - self.MARGIN:
-        self.xstep = -self.STEP
-        self.ystep = 0
-        self.direciton = 'left'
+        if self.direction == 'down' and self.rect.bottom > self.area.bottom - self.MARGIN:
+            self.xstep = -self.STEP
+            self.ystep = 0
+            self.direciton = 'left'
 
-    if self.direction == 'left' and self.rect.left < self.area.left + self.MARGIN:
-        self.xstep = 0
-        self.ystep = -self.STEP
-        self.direction = 'up'
+        if self.direction == 'left' and self.rect.left < self.area.left + self.MARGIN:
+            self.xstep = 0
+            self.ystep = -self.STEP
+            self.direction = 'up'
 
-    if self.direction == 'up' and self.rect.top < self.area.top + self.MARGIN:
-        self.xstep = self.STEP
-        self.ystep = 0
-        self.direction = 'right'
+        if self.direction == 'up' and self.rect.top < self.area.top + self.MARGIN:
+            self.xstep = self.STEP
+            self.ystep = 0
+            self.direction = 'right'
 
-    self.rect = newpos
+        self.rect = newpos
 
-def _spin(self):
-    center = self.rect.center
-    self.degrees = self.degrees + 12
-    if self.degrees >= 360:
-        self.degree = 0
-    else:
-        self.image = pygame.transform.rotate(self.original, self.degrees)
-    self.rect = self.image.get_rect(center=center)
+    def _spin(self):
+        center = self.rect.center
+        self.degrees = self.degrees + 12
+        if self.degrees >= 360:
+            self.degree = 0
+        else:
+            self.image = pygame.transform.rotate(self.original, self.degrees)
+        self.rect = self.image.get_rect(center=center)
 
-def hit(self):
-    if not self.degrees:
-        self.degrees = 1
-        self.original = self.image
+    def hit(self):
+        if not self.degrees:
+            self.degrees = 1
+            self.original = self.image
 
 def main():
     pygame.init()
