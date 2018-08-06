@@ -8,8 +8,15 @@ import os, pygame
 from pygame.locals import *
 
 def load_image(name, colorkey=None):
-    pass
-    
+    try:
+        image = pygame.image.load(name)
+    except(pygame.error, message):
+        print("Cannot load image: ", name)
+
+    image = image.convert()
+
+    return image, image.get_rect()
+
 class Head(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
