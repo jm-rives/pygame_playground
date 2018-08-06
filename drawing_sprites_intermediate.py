@@ -73,3 +73,6 @@ def hit(self):
     if not self.degrees:
         self.degrees = 1
         self.original = self.image
+
+def main():
+    pass
