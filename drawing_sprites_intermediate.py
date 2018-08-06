@@ -22,6 +22,7 @@ class Head(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
         self.image, self.rect = load_image('head.jpg', -1)
         screen = pygame.display.get_surface()
+        self.area = screen.get_rect()
         self.STEP = 9
         self.MARGIN = 12
         self.xstep = self.STEP
