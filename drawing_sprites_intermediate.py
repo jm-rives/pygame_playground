@@ -6,3 +6,6 @@
 
 import os, pygame
 from pygame.locals import *
+
+class Head(pygame.sprite.Sprite):
+    pass
