@@ -82,3 +82,6 @@ def main():
     background = pygame.Surgace(screen.get_size())
     background = background.convert()
     background.fill((250, 250, 250))
+
+    if pygame.font:
+        pass
