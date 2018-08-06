@@ -70,4 +70,6 @@ def _spin(self):
     self.rect = self.image.get_rect(center=center)
 
 def hit(self):
-    pass
+    if not self.degrees:
+        self.degrees = 1
+        self.original = self.image
