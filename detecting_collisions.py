@@ -72,7 +72,12 @@ class Head(pygame.sprite.Sprite):
         self.rect = self.image.get_rect(center=center)
 
     def hit(self):
-        pass
+        mouse_x, mouse_y = pygame.mouse.get_pos()
+        collided = False
+        bigger_rect = self.rect.inflate(40, 40)
+
+        
+
 
 def main():
     pygame.init()
