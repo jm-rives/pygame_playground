@@ -29,6 +29,8 @@ class Head(pygame.sprite.Sprite):
         self.ystep = 0
         self.degrees = 0
         self.direction = 'right'
+        self.nhits = 0
+        self.nmisses = 0
 
     def update(self):
         if self.degrees:
