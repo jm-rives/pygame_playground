@@ -30,4 +30,5 @@ def main():
     indices = numpy.random.random_intergers(9, 2, NPOINTS)
     point = [175.0, 150.0]
 
-    
+    for index in indices:
+        pass
