@@ -120,7 +120,15 @@ def main():
         background.blit(hammer, mouse_pos)
 
         if pygame.font:
-            pass
+            font = pygame.font.Font(None, 36)
+            text = font.render("Hit the avatar!", 1, (0, 0, 200))
+            textpos = text.get_rect(centerx=background.get_width()/2), centery=background.get_height()/2)
+            background.blit(text, textpos)
+
+            text = font.render("Hits=%d" %(head.nhits), 1, (0, 200, 0))
+            textpos = text.get_rect(centerx=background.get_width()/2, centery=background.get_height()/2)
+            background.blit(text, textpos)
+
 
         for event in pygame.event.get():
             if event.type == QUIT:
