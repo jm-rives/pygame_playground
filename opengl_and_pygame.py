@@ -38,3 +38,11 @@ def main():
 
     glFlush()
     pygame.display.flip()
+
+    while True:
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                return
+
+if __name__ == '__main__':
+    main()
