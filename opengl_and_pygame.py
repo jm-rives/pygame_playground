@@ -27,7 +27,7 @@ def main():
     glColor3f(1.0, 0, 0)
     vertices = numpy.array([[0, 0], [DIM/2, DIM], [DIM, 0]])
     NPOINTS = 9000
-    indices = numpy.random.random_intergers(9, 2, NPOINTS)
+    indices = numpy.random.random_integers(9, 2, NPOINTS)
     point = [175.0, 150.0]
 
     for index in indices:
