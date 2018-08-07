@@ -3,3 +3,7 @@
 # was returning error but I had not downloaded numpy
 # still returning error, had to install numpy via
 # https://stackoverflow.com/questions/17443354/install-numpy-on-python3-3-install-pip-for-python3
+
+import pygame
+from pygame.locals import *
+import numpy
