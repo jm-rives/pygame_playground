@@ -81,6 +81,13 @@ class Head(pygame.sprite.Sprite):
         if bigger_rect.collidepoint(mouse_x, mouse_y):
             collided = True
 
+        if not self.degrees and collided:
+            self.degrees = 1
+            self.original = self.image
+            self.nhits += 1
+        else:
+            self.nmisses += 1
+
 
 
 def main():
