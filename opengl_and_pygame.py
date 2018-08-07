@@ -16,3 +16,8 @@ def display_openGl(w, h):
 
     glClearColor(0.0, 0.0, 0.0, 1.0)
     glClear(GL_COLOR_BUGGER_BIT|GL_DEPTH_BUFFER_BIT)
+
+    gluOrtho2D(0, w, 0, h)
+
+def main():
+    pass
