@@ -8,7 +8,7 @@ import pygame
 from pygame.locals import *
 import numpy
 
-from OpenGl.Gl import *
+from OpenGl.GL import *
 from OpenGl.GLU import *
 
 def display_openGl(w, h):
