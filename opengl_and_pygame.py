@@ -35,3 +35,6 @@ def main():
         point = (point + vertices[index])/2.0
         glVertex2fv(point)
         glEnd()
+
+    glFlush()
+    pygame.display.flip()
