@@ -12,7 +12,7 @@ from OpenGL.GL import *
 from OpenGL.GLU import *
 
 def display_openGL(w, h):
-    pygame.display.set_mode((w, h), pygame.OPENGL|PYGAME.DOUBLEBUF)
+    pygame.display.set_mode((w, h), pygame.OPENGL|pygame.DOUBLEBUF)
 
     glClearColor(0.0, 0.0, 0.0, 1.0)
     glClear(GL_COLOR_BUGGER_BIT|GL_DEPTH_BUFFER_BIT)
