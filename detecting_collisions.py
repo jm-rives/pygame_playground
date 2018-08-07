@@ -72,9 +72,7 @@ class Head(pygame.sprite.Sprite):
         self.rect = self.image.get_rect(center=center)
 
     def hit(self):
-        if not self.degrees:
-            self.degrees = 1
-            self.original = self.image
+        pass
 
 def main():
     pygame.init()
