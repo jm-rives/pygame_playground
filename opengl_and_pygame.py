@@ -7,3 +7,6 @@
 import pygame
 from pygame.locals import *
 import numpy
+
+from OpenGl.Gl import *
+from OpenGl.GLU import *
