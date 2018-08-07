@@ -20,4 +20,14 @@ def display_openGl(w, h):
     gluOrtho2D(0, w, 0, h)
 
 def main():
-    pass
+    pygame.init()
+    pygame.display.set_caption('OpenGL Demo')
+    DIM = 400
+    display_openGl(DIM, DIM)
+    glColor3f(1.0, 0, 0)
+    vertices = numpy.array([[0, 0], [DIM/2, DIM], [DIM, 0]])
+    NPOINTS = 9000
+    indices = numpy.random.random_intergers(9, 2, NPOINTS)
+    point = [175.0, 150.0]
+
+    
