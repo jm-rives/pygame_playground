@@ -76,7 +76,9 @@ class Head(pygame.sprite.Sprite):
         collided = False
         bigger_rect = self.rect.inflate(40, 40)
 
-        
+        if bigger_rect.collidepoint(mouse_x, mouse_y):
+            collided = True
+
 
 
 def main():
