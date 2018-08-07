@@ -79,7 +79,7 @@ class Head(pygame.sprite.Sprite):
 def main():
     pygame.init()
     screen = pygame.display.set_mode((400, 400))
-    pygame.display.set_caption("Sprite Demo")
+    pygame.display.set_caption("Collision Demo")
 
     background = pygame.Surface(screen.get_size())
     background = background.convert()
