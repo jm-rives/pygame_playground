@@ -31,4 +31,7 @@ def main():
     point = [175.0, 150.0]
 
     for index in indices:
-        pass
+        glBegin(GL_POINTS)
+        point = (point + vertices[index])/2.0
+        glVertex2fv(point)
+        glEnd()
