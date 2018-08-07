@@ -8,10 +8,10 @@ import pygame
 from pygame.locals import *
 import numpy
 
-from OpenGl.GL import *
-from OpenGl.GLU import *
+from OpenGL.GL import *
+from OpenGL.GLU import *
 
-def display_openGl(w, h):
+def display_openGL(w, h):
     pygame.display.set_mode((w, h), pygame.OPENGL|PYGAME.DOUBLEBUF)
 
     glClearColor(0.0, 0.0, 0.0, 1.0)
@@ -23,7 +23,7 @@ def main():
     pygame.init()
     pygame.display.set_caption('OpenGL Demo')
     DIM = 400
-    display_openGl(DIM, DIM)
+    display_openGL(DIM, DIM)
     glColor3f(1.0, 0, 0)
     vertices = numpy.array([[0, 0], [DIM/2, DIM], [DIM, 0]])
     NPOINTS = 9000
