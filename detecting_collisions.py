@@ -122,12 +122,18 @@ def main():
         if pygame.font:
             font = pygame.font.Font(None, 36)
             text = font.render("Hit the avatar!", 1, (0, 0, 200))
-            textpos = text.get_rect(centerx=background.get_width()/2), centery=background.get_height()/2)
+            textpos = text.get_rect(centerx=background.get_width()/2, centery=background.get_height()/2)
             background.blit(text, textpos)
 
             text = font.render("Hits=%d" %(head.nhits), 1, (0, 200, 0))
-            textpos = text.get_rect(centerx=background.get_width()/2, centery=background.get_height()/2)
+            textpos = text.get_rect(centerx=background.get_width()/2, centery=background.get_height()/2 + 36)
             background.blit(text, textpos)
+
+            text = font.render("Misses=%d" %(head.nmisses), 1, (200, 0, 0))
+            textpos = text.get_rect(centerx=background.get_width()/2, centery=background.get_height()/2 + 72)
+            background.blit(text, textpos)
+
+
 
 
         for event in pygame.event.get():
