@@ -10,3 +10,6 @@ import numpy
 
 from OpenGl.Gl import *
 from OpenGl.GLU import *
+
+def display_openGl(w, h):
+    pass
