@@ -119,6 +119,9 @@ def main():
         hammer, hammer_rect = load_image('hammer.png', -1)
         background.blit(hammer, mouse_pos)
 
+        if pygame.font:
+            pass
+
         for event in pygame.event.get():
             if event.type == QUIT:
                 return
